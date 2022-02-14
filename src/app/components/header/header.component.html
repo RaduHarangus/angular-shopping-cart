@@ -2,15 +2,15 @@
   <nav class="navbar navbar-dark bg-primary shadow-sm">
     <div class="navbar-brand align-item-center d-flex">
       <i style="font-size: 40px;" class="fas fa-shipping-fast">&nbsp;</i>
-      <strong style="font-size: 30px;">Flipkart</strong>
+      <strong style="font-size: 30px;" routerLink="">Flipkart</strong>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="search products">
+        <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products">
       </div>
       <span class="search-icon fas fa-search"></span>
     </div>
     <button class="btn btn-primary" routerLink="/cart">
       <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
-      <div style="font-size: 10px;" class="badge bg-danger">5</div>
+      <div style="font-size: 10px;" class="badge bg-danger">{{ totalItems }}</div>
     </button>
   </nav>
 </header>
